@@ -104,4 +104,8 @@ theme: butterfly
 deploy:
   type: git
   repo: https://github.com/ufoyangyang/zichengyang.github.io.git
+<<<<<<< HEAD
   branch: master
+=======
+  branch: master
+>>>>>>> 5cf3ce8ed83d38f13dfca70cc6ddf76652304afa
