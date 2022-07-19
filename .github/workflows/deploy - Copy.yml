@@ -5,7 +5,7 @@ on:
   # Triggering Condition 1 Main Branch Performs The Task After Receiving Push
   push:
     branches:
-      - master
+      - main
   # Triggering Condition 2 Manual Button
   workflow_dispatch:
 
@@ -20,13 +20,14 @@ env:
   # Hexo Compiles The Branch To Deploy After Compilation
   GIT_DEPLOY_BRANCH: master
   
+  
   # # After Hexo Compiles Use This Gitee User To Deploy To The Gitee Warehouse
   # GITEE_USER: Coder-Jason
   # # The Gitee Warehouse To Be Deployed After Hexo Compiles
   # GITEE_DEPLOY_REPO: Coder-Jason/Coder-Jason
   # # Hexo Compiles The Branch To Deploy After Compilation
   # GITEE_DEPLOY_BRANCH: master
-  
+
   # Pay Attention To Replacing Your Github Source Warehouse Address
   GIT_SOURCE_REPO: git@github.com:ufoyangyang/zichengyang.github.io
   # Pay Attention To Replacement To Your Gitee Target Warehouse Address
@@ -72,18 +73,17 @@ jobs:
           ssh-keyscan -t rsa gitee.com >> ~/.ssh/known_hosts
           git config --global user.name $GIT_USER
           git config --global user.email $GIT_EMAIL
-
+          
       - name: Install dependencies
         run: |
           npm install hexo-cli -g
-		  # Install According To The Components You Installed
           npm install hexo-deployer-git hexo-generator-archive hexo-generator-category hexo-generator-index hexo-generator-tag hexo-renderer-ejs hexo-renderer-marked hexo-renderer-pug hexo-renderer-stylus hexo-server hexo-theme-landscape hexo --save
 
-      - name: Deploy hexo
-        run: |
-          npm run deploy
+      # - name: Deploy hexo
+      #   run: |
+      #     npm run deploy
 		  
-      # The Following Is The Release To Gitee
+      # # The Following Is The Release To Gitee
       # - name: Sync to Gitee
       #   uses: wearerequired/git-mirror-action@master
       #   env:
