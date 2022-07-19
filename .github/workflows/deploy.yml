@@ -5,7 +5,7 @@ on:
   # Triggering Condition 1 Main Branch Performs The Task After Receiving Push
   push:
     branches:
-      - master
+      - main
   # Triggering Condition 2 Manual Button
   workflow_dispatch:
 
