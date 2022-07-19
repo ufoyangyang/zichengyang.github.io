@@ -73,12 +73,12 @@ jobs:
           git config --global user.name $GIT_USER
           git config --global user.email $GIT_EMAIL
 
-      - name: Install dependencies
-        run: |
-          npm install hexo-cli -g
-          npm install
-		  # Install According To The Components You Installed
-          npm install hexo-deployer-git hexo-generator-archive hexo-generator-category hexo-generator-index hexo-generator-tag hexo-renderer-ejs hexo-renderer-marked hexo-renderer-pug hexo-renderer-stylus hexo-server hexo-theme-landscape --save
+      # - name: Install dependencies
+      #   run: |
+      #     npm install hexo-cli -g
+      #     npm install
+		  # # Install According To The Components You Installed
+      #     npm install hexo-deployer-git hexo-generator-archive hexo-generator-category hexo-generator-index hexo-generator-tag hexo-renderer-ejs hexo-renderer-marked hexo-renderer-pug hexo-renderer-stylus hexo-server hexo-theme-landscape --save
 
       - name: Deploy hexo
         run: |
