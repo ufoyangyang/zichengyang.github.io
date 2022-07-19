@@ -73,12 +73,16 @@ jobs:
           ssh-keyscan -t rsa gitee.com >> ~/.ssh/known_hosts
           git config --global user.name $GIT_USER
           git config --global user.email $GIT_EMAIL
-
+          
       - name: Install dependencies
         run: |
-          npm install hexo-cli -g
-		  # Install According To The Components You Installed
-         npm install - gulp gulp-uglify hexo hexo-deployer-git hexo-generator-archive hexo-generator-category hexo-generator-feed hexo-generator-index hexo-generator-search hexo-generator-searchdb hexo-generator-sitemap hexo-generator-tag hexo-leancloud-counter-security hexo-renderer-ejs hexo-renderer-marked hexo-renderer-pug hexo-renderer-stylus hexo-server hexo-tag-cloud hexo-word-counter readable-stream uglify-es --save
+          npm install
+
+      # - name: Install dependencies
+      #   run: |
+      #     npm install hexo-cli -g
+		  # # Install According To The Components You Installed
+      #    npm install - gulp gulp-uglify hexo hexo-deployer-git hexo-generator-archive hexo-generator-category hexo-generator-feed hexo-generator-index hexo-generator-search hexo-generator-searchdb hexo-generator-sitemap hexo-generator-tag hexo-leancloud-counter-security hexo-renderer-ejs hexo-renderer-marked hexo-renderer-pug hexo-renderer-stylus hexo-server hexo-tag-cloud hexo-word-counter readable-stream uglify-es --save
 
       - name: Deploy hexo
         run: |
