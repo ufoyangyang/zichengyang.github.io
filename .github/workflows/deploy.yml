@@ -16,7 +16,7 @@ env:
   # After Hexo Compiles Use This Git Mailbox To Deploy To The Github Warehouse
   GIT_EMAIL: 524630668@qq.com
   # The Git Hub Warehouse To Be Deployed After Hexo Compiles
-  GIT_DEPLOY_REPO: ufoyangyang/zichengyang.github.io
+  GIT_DEPLOY_REPO: ufoyangyang/zichengyang.github.io.git
   # Hexo Compiles The Branch To Deploy After Compilation
   GIT_DEPLOY_BRANCH: master
   
@@ -76,13 +76,8 @@ jobs:
           
       - name: Install dependencies
         run: |
-          npm install
+          npm install hexo-cli -g
           npm install hexo-deployer-git hexo-generator-archive hexo-generator-category hexo-generator-index hexo-generator-tag hexo-renderer-ejs hexo-renderer-marked hexo-renderer-pug hexo-renderer-stylus hexo-server hexo-theme-landscape hexo --save
-      # - name: Install dependencies
-      #   run: |
-      #     npm install hexo-cli -g
-		  # # Install According To The Components You Installed
-      #    npm install - gulp gulp-uglify hexo hexo-deployer-git hexo-generator-archive hexo-generator-category hexo-generator-feed hexo-generator-index hexo-generator-search hexo-generator-searchdb hexo-generator-sitemap hexo-generator-tag hexo-leancloud-counter-security hexo-renderer-ejs hexo-renderer-marked hexo-renderer-pug hexo-renderer-stylus hexo-server hexo-tag-cloud hexo-word-counter readable-stream uglify-es --save
 
       - name: Deploy hexo
         run: |
