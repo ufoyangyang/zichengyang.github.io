@@ -79,9 +79,9 @@ jobs:
           npm install hexo-cli -g
           npm install hexo-deployer-git hexo-generator-archive hexo-generator-category hexo-generator-index hexo-generator-tag hexo-renderer-ejs hexo-renderer-marked hexo-renderer-pug hexo-renderer-stylus hexo-server hexo-theme-landscape hexo --save
 
-      - name: Deploy hexo
-        run: |
-          npm run deploy
+      # - name: Deploy hexo
+      #   run: |
+      #     npm run deploy
 		  
       # # The Following Is The Release To Gitee
       # - name: Sync to Gitee
