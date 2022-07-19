@@ -44,7 +44,7 @@ social:
 
 # Algolia search
 algolia_search:
-  enable: true
+  enable: false
   hits:
     per_page: 6
 
@@ -80,7 +80,7 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://github.com/ufoyangyang/picture-link-zy.git/WeChat Image_20220718200727.jpg
+  img: https://github.com/ufoyangyang/picture-link-zy/blob/main/WeChat%20Avatar.jpg
   effect: false
 
 # Disable all banner image
@@ -193,7 +193,7 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-     - img: https://github.com/ufoyangyang/picture-link-zy.git/WeChat Image_20220718200717.jpg
+     - img: https://github.com/ufoyangyang/picture-link-zy/blob/main/WeChat%20donate%20.jpg
     #   link:
        text: wechat
     # - img: /img/alipay.jpg
